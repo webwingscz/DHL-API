@@ -46,13 +46,14 @@ class ShipmentRequest extends Base
      * @var string
      * Service XSD
      */
-    protected $_serviceXSD = 'ShipmentRequest.xsd';
+    // protected $_serviceXSD = 'ShipmentRequest.xsd';
+    protected $_serviceXSD = 'ship-val-global-req.xsd';
 
     /**
      * @var string
      * The schema version
      */
-    protected $_schemaVersion = '1.0';
+    protected $_schemaVersion = '6.0';
 
     /**
      * Display the schema version
@@ -194,6 +195,12 @@ class ShipmentRequest extends Base
             'type' => 'Label',
             'required' => false,
             'subobject' => true,
-        ), 
+        ),
+        'DGs' => array(
+            'type' => 'DG',
+            'required' => false,
+            'subobject' => true,
+            'multivalues' => true,
+        ),
     );
 }

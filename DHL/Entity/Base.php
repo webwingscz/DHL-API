@@ -156,12 +156,14 @@ abstract class Base extends BaseDataType
 
         $xmlWriter->startElement('Request');
         $xmlWriter->startElement('ServiceHeader');
+        
         foreach ($this->_headerParams as $name => $infos) 
         {
             $xmlWriter->writeElement($name, $this->$name);
         }
-        $xmlWriter->endElement(); // End of Request
+        
         $xmlWriter->endElement(); // End of ServiceHeader
+        $xmlWriter->endElement(); // End of Request
 
         foreach ($this->_bodyParams as $name => $infos) 
         {
