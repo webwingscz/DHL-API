@@ -1,5 +1,5 @@
 {
-    "name": "Webwings/dhl-api",
+    "name": "webwings/dhl-api",
 
     "description": "PHP library to communicate with the DHL XML Services.",
 
